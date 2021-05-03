@@ -76,9 +76,9 @@ def balae(c,o0=blankout,o1=blankout,o2=blankout,o3=blankout,o4=blankout,o5=blank
     nonlocal tape
     nonlocal pt
     nonlocal pc
-    nonlocal c
+    nonlocal cd
 
-    while cd[pc][1]!=a:
+    while cd[pc][1]!=a or cd[pc][0]!=6:
       pc+=1
     return False
   def jumpback(a):
@@ -87,8 +87,8 @@ def balae(c,o0=blankout,o1=blankout,o2=blankout,o3=blankout,o4=blankout,o5=blank
     nonlocal pc
     nonlocal cd
 
-    while cd[pc][1]!=a:
-      pc+=1
+    while cd[pc][1]!=a or cd[pc][0]!=6:
+      pc-=1
     return False
   def label(a):
     return True
